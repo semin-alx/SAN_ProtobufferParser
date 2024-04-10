@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.461,=C:\Users\SeminA\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.817,=C:\Users\SeminA\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.220,=C:\Users\SeminA\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.302,=C:\Users\SeminA\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.150,C:\Users\SeminA\Documents\RAD Studio\Projects\Unit1.pas=C:\Smn_work_2\DelphiXE2\PROJECTS\ProtobufferParser\Source\pbpgui\fMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.150,C:\Users\SeminA\Documents\RAD Studio\Projects\Unit1.dfm=C:\Smn_work_2\DelphiXE2\PROJECTS\ProtobufferParser\Source\pbpgui\fMain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.142,C:\Users\SeminA\Documents\RAD Studio\Projects\Project1.dproj=C:\Smn_work_2\DelphiXE2\PROJECTS\ProtobufferParser\Source\pbpgui\pbpgui.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.863,=C:\Users\SeminA\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.019,=C:\Users\SeminA\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
