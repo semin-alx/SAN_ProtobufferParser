@@ -41,6 +41,7 @@ type
     procedure DefineMessageField(MessageType: TsmProtoMessage; Offset: integer);
     procedure DefineEnumItem(ProtoEnum: TsmProtoEnum; Offset: integer);
     procedure AddNormalField(Field: TsmProtoNormalField; Offset: integer);
+    procedure AddOneOfField(Field: TsmProtoOneOfField; Offset: integer);
     procedure AddMapField(Field: TsmProtoMapField; Offset: integer);
     procedure AddConstProtoNames(Container: TsmProtoBufContainer;
       ConstArrayName: string; ProtoType: TsmProtoBaseFieldType);
@@ -206,10 +207,9 @@ begin
 
   for Field in MessageType.Fields do begin
 
-    {$MESSAGE HINT 'Build pas file: Oneof not done yet'}
-    //if Field is TsmProtoOneOfField then begin
-
-    //end else
+    if Field is TsmProtoOneOfField then begin
+      AddOneOfField(TsmProtoOneOfField(Field), Offset);
+    end else
     if Field is TsmProtoNormalField then begin
       AddNormalField(TsmProtoNormalField(Field), Offset);
     end else
@@ -505,6 +505,14 @@ begin
       [VariantToPasString(Field.DefaultValue)]), Offset);
   end;
 
+end;
+
+procedure TsmDelphiBuilder.AddOneOfField(Field: TsmProtoOneOfField;
+  Offset: integer);
+begin
+  AddNormalField(Field, Offset);
+  AddLine(Format('FieldDef[FieldDefsCount-1].OneOfName:= %s;',
+    [VariantToPasString(Field.OneOfGroupName)]), Offset);
 end;
 
 procedure TsmDelphiBuilder.AddParsedFiles(Container: TsmProtoBufContainer;
